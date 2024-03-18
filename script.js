@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
         };
 
         // URL de votre Azure Function
-        const functionUrl = 'https://lepontapp.azurewebsites.net';
+        const functionUrl = 'https://lepontapp.azurewebsites.net/MyHttpTrigger';
 
         // Envoi des données au backend via Fetch API
         fetch(functionUrl, {
