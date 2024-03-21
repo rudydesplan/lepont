@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Suppression de retour</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <ul>
+                <li><a href="index.html">Formulaire de retour</a></li>
+                <li><a href="delete-feedback.html">Suppression de retour</a></li>
+                <li><a href="update-feedback.html">Mise à jour du retour</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <!-- Insertion du logo ici -->
+            <img src="logolp.png" id="logo" alt="Logo" />
+            <!-- Le formulaire de suppression commence ici -->
+            <form id="delete-form" class="form">
+                <div class="form-group">
+                    <label for="feedbackId">ID du retour :</label>
+                    <input type="text" id="feedbackId" name="feedbackId" required>
+                </div>
+                <button type="submit">Supprimer</button>
+            </form>
+        </div>
+    </div>
+    <script src="delete-script.js"></script>
+</body>
+</html>

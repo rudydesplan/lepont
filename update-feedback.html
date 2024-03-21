@@ -2,13 +2,13 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Formulaire de retour</title>
+    <title>Mise à jour du retour</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="wrapper">
         <div class="sidebar">
-            <!-- Sidebar navigation -->
+            <!-- Mise à jour de la navigation dans la barre latérale -->
             <ul>
                 <li><a href="index.html">Formulaire de retour</a></li>
                 <li><a href="delete-feedback.html">Suppression de retour</a></li>
@@ -16,12 +16,15 @@
             </ul>
         </div>
         <div class="content">
-            <!-- Main content: Your existing form -->
-            <form id="feedback-form">
+            <form id="update-form">
                 <img src="logolp.png" id="logo" />
-                <h2>Votre retour sur la formation</h2>
+                <h2>Mise à jour du retour sur la formation</h2>
                 <div class="form-group">
-                    <label for="bootcampname">Nom du bootcamp :</label>
+                    <label for="feedbackId">ID du retour à mettre à jour :</label>
+                    <input type="text" id="feedbackId" name="feedbackId" required>
+                </div>
+                <div class="form-group">
+                    <label for="formation">Nom du bootcamp :</label>
                     <select id="formation" name="formation">
                         <option value="">Sélectionnez une formation</option>
                         <option value="data_engineering">Data Engineering</option>
@@ -33,7 +36,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="score">Type de retour</label>
+                    <label for="typeRetour">Type de retour</label>
                     <select id="typeRetour" name="typeRetour">
                         <option value="">Sélectionnez un type de retour</option>
                         <option value="contenu_cours">Contenu du cours</option>
@@ -49,27 +52,26 @@
                 </div>
                 <div class="form-group">
                     <label for="date">Date :</label>
-                    <input type="date" id="date" name="date" required>
+                    <input type="date" id="date" name="date">
                 </div>
                 <div class="form-group">
                     <label for="rating">Évaluation: <span id="ratingvalue"></span></label>
-                    <input type="range" id="rating" name="rating" min="1" max="10" required>
+                    <input type="range" id="rating" name="rating" min="1" max="10">
                 </div>
                 <div class="form-group">
                     <label for="comments">Commentaires :</label>
-                    <textarea id="comments" name="comments" rows="4" required></textarea>
+                    <textarea id="comments" name="comments" rows="4"></textarea>
                 </div>
-                
                 <div class="form-group">
                     <label>
-                        <input type="checkbox" id="consentement" name="consentement" required>
+                        <input type="checkbox" id="consentement" name="consentement">
                         J'accepte que mes données soient traitées dans le cadre de cette enquête.
                     </label>
                 </div>
-                <button type="submit">Soumettre</button>
+                <button type="submit">Mettre à jour</button>
             </form>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="update-script.js"></script>
 </body>
 </html>
