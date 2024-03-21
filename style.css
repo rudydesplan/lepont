@@ -1,6 +1,41 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    min-height: 100vh;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar {
+    min-width: 250px;
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.content {
+    flex-grow: 1;
     padding: 20px;
     background-color: #f0f0f0;
 }
@@ -30,7 +65,7 @@ select {
     border-radius: 5px;
 }
 
-span#ratingvalue{
+span#ratingvalue {
     padding: 0 15px;
 }
 
@@ -52,11 +87,13 @@ input[readonly] {
 }
 
 input[type=range] {
-    width: 10%;
+    width: 100%;
     padding: 0;
     margin-top: 15px;
 }
 
 img#logo {
+    display: block;
+    margin: 0 auto 20px auto;
     width: 250px;
 }
