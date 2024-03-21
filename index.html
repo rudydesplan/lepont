@@ -6,58 +6,70 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form id="feedback-form">
-        <img src="logolp.png" id="logo" />
-        <h2>Votre retour sur la formation</h2>
-        <div class="form-group">
-            <label for="bootcampname">Nom du bootcamp :</label>
-            <select id="formation" name="formation">
-                <option value="">Sélectionnez une formation</option>
-                <option value="data_engineering">Data Engineering</option>
-                <option value="data_science">Data Science</option>
-                <option value="web_development">Développement Web</option>
-                <option value="cyber_security">Cybersécurité</option>
-                <option value="artificial_intelligence">Intelligence Artificielle</option>
-                <option value="cloud_computing">Cloud Computing</option>
-            </select>
+    <div class="wrapper">
+        <div class="sidebar">
+            <!-- Sidebar navigation -->
+            <ul>
+                <li><a href="index.html">Formulaire de retour</a></li>
+                <li><a href="delete-feedback.html">Suppression de retour</a></li>
+            </ul>
         </div>
-        <div class="form-group">
-            <label for="score">Type de retour</label>
-            <select id="typeRetour" name="typeRetour">
-                <option value="">Sélectionnez un type de retour</option>
-                <option value="contenu_cours">Contenu du cours</option>
-                <option value="formateur">Formateur</option>
-                <option value="methodes_pedagogiques">Méthodes pédagogiques</option>
-                <option value="equipements">Équipements</option>
-                <option value="support_cours">Support de cours</option>
-                <option value="activites_extra">Activités extra-scolaires</option>
-                <option value="environnement_apprentissage">Environnement d'apprentissage</option>
-                <option value="communication">Communication</option>
-                <option value="axe_amelioration">Axe d'amélioration</option>
-            </select>
+        <div class="content">
+            <!-- Main content: Your existing form -->
+            <form id="feedback-form">
+                <img src="logolp.png" id="logo" />
+                <h2>Votre retour sur la formation</h2>
+                <div class="form-group">
+                    <label for="bootcampname">Nom du bootcamp :</label>
+                    <select id="formation" name="formation">
+                        <option value="">Sélectionnez une formation</option>
+                        <option value="data_engineering">Data Engineering</option>
+                        <option value="data_science">Data Science</option>
+                        <option value="web_development">Développement Web</option>
+                        <option value="cyber_security">Cybersécurité</option>
+                        <option value="artificial_intelligence">Intelligence Artificielle</option>
+                        <option value="cloud_computing">Cloud Computing</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="score">Type de retour</label>
+                    <select id="typeRetour" name="typeRetour">
+                        <option value="">Sélectionnez un type de retour</option>
+                        <option value="contenu_cours">Contenu du cours</option>
+                        <option value="formateur">Formateur</option>
+                        <option value="methodes_pedagogiques">Méthodes pédagogiques</option>
+                        <option value="equipements">Équipements</option>
+                        <option value="support_cours">Support de cours</option>
+                        <option value="activites_extra">Activités extra-scolaires</option>
+                        <option value="environnement_apprentissage">Environnement d'apprentissage</option>
+                        <option value="communication">Communication</option>
+                        <option value="axe_amelioration">Axe d'amélioration</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date :</label>
+                    <input type="text" id="date" name="date" required readonly>
+                </div>
+                <div class="form-group">
+                    <label for="rating">Évaluation :</label>
+                    <input type="range" id="rating" name="rating" min="1" max="5" required>
+                    <span id="ratingvalue"></span>
+                </div>
+                <div class="form-group">
+                    <label for="comments">Commentaires :</label>
+                    <textarea id="comments" name="comments" rows="4" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="consentement" name="consentement" required>
+                        J'accepte que mes données soient traitées dans le cadre de cette enquête.
+                    </label>
+                </div>
+                <button type="submit">Soumettre</button>
+            </form>
         </div>
-        <div class="form-group">
-            <label for="date">Date :</label>
-            <input type="text" id="date" name="date" required readonly>
-        </div>
-        <div class="form-group">
-            <label for="rating">Évaluation :</label>
-            <input type="range" id="rating" name="rating" min="1" max="5" required>
-            <span id="ratingvalue"></span>
-        </div>
-        <div class="form-group">
-            <label for="comments">Commentaires :</label>
-            <textarea id="comments" name="comments" rows="4" required></textarea>
-        </div>
-        
-        <div class="form-group">
-            <label>
-                <input type="checkbox" id="consentement" name="consentement" required>
-                J'accepte que mes données soient traitées dans le cadre de cette enquête.
-            </label>
-        </div>
-        <button type="submit">Soumettre</button>
-    </form>
+    </div>
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
