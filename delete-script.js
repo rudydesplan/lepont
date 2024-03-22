@@ -3,15 +3,16 @@ document.getElementById('delete-form').addEventListener('submit', function(event
 
     const feedbackId = document.getElementById("feedbackId").value;
 
-    // URL to your Azure Function for deletion
-    const functionUrl = '';
+    // URL to your Azure Function for deletion - replace this with your actual Azure Function URL
+    const functionUrl = 'https://lepontapp.azurewebsites.net/MyHttpTrigger2';
 
     fetch(functionUrl, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ id: feedbackId }),
+        // Make sure the key matches the expected parameter in your Azure Function ('id_to_delete')
+        body: JSON.stringify({ id_to_delete: feedbackId }),
     })
     .then(response => {
         if (response.ok) {
